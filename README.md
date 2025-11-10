@@ -18,8 +18,27 @@ b.	Add the ASCII value of the current character to the hash.
 
 
 ## PROGRAM:
+~~~
+#include <stdio.h>
 
+int main() {
+    char message[100];
+    unsigned long hash = 0;
+    int i;
+
+    printf("Enter a message: ");
+    scanf("%s", message);
+
+    for (i = 0; message[i] != '\0'; i++) {
+        hash = hash * 31 + message[i];
+    }
+
+    printf("\nGenerated Hash Value: %lu\n", hash);
+    return 0;
+}
+~~~
 ## OUTPUT:
+<img width="1920" height="1071" alt="{14CB874D-B89B-4C22-B9C6-A05DAC18FCB1}" src="https://github.com/user-attachments/assets/c139efb0-3770-4cac-a966-534faca2170a" />
 
 ## RESULT:
 
